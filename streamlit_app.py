@@ -1,4 +1,3 @@
-# app.py
 import datetime as dt
 import io
 
@@ -7,24 +6,24 @@ import pandas as pd
 import streamlit as st
 import yfinance as yf
 
-st.set_page_config(page_title="Synovus - F&E Growth (80/20) Strategy (Q2 2025 Allocation)", layout="centered")
-st.title("Synovus - F&E Growth (80/20) Strategy (Q2 2025 Allocation)")
+st.set_page_config(page_title="Synovus - F&E Growth (80/20) Strategy", layout="centered")
+st.title("Synovus - F&E Growth (80/20) Strategy (Q3 2025 Allocation)")
 
 # ---------- Allocation & metadata ----------
 ALLOC_PCT = {
-    "SPY":   47.850,  # SPDR S&P 500 ETF
-    "JMVYX": 8.803,   # JPMorgan Mid Cap Value R6
-    "VXUS":  5.100,   # Vanguard Total International Stock Index ETF
-    "VWILX": 4.950,   # Vanguard International Growth Admiral
-    "VTRIX": 4.950,   # Vanguard International Value Investor
+    "SPY":   51.600,  # SPDR S&P 500 ETF
+    "JMVYX": 9.014,   # JPMorgan Mid Cap Value R6
+    "VXUS":  5.440,   # Vanguard Total International Stock Index ETF
+    "VWILX": 5.280,   # Vanguard International Growth Admiral
+    "VTRIX": 5.280,   # Vanguard International Value Investor
     "VCRIX": 3.000,   # NYLI CBRE Global Infrastructure I
-    "JDMNX": 2.447,   # Janus Henderson Enterprise N
-    "QUAYX": 0.450,   # AB Small Cap Growth Advisor
-    "FIKNX": 0.450,   # Fidelity Advisor Small Cap Value Z
+    "JDMNX": 2.506,   # Janus Henderson Enterprise N
+    "QUAYX": 0.440,   # AB Small Cap Growth Advisor
+    "FIKNX": 0.440,   # Fidelity Advisor Small Cap Value Z
     "BIMIX": 6.300,   # Baird Intermediate Bond Inst
     "GVI":   6.300,   # iShares Intermediate Govt/Credit ETF
     "DODIX": 1.400,   # Dodge & Cox Income I
-    "GOIXX": 8.000,   # Federated Hermes Government Obligations IS
+    "GOIXX": 3.000,   # Federated Hermes Government Obligations IS
 }
 NAMES = {
     "SPY":   "SPDR® S&P 500® ETF",
